@@ -1,0 +1,27 @@
+{
+  "name": "beer-color",
+  "version": "1.0.0",
+  "description": "Convert SRM or EBC color values to web-friendly hex.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zymulator/beer-color.git"
+  },
+  "keywords": [
+    "beer",
+    "color",
+    "srm",
+    "ebc",
+    "lovibond",
+    "hex"
+  ],
+  "author": "Nick Barry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zymulator/beer-color/issues"
+  },
+  "homepage": "https://github.com/zymulator/beer-color#readme"
+}
