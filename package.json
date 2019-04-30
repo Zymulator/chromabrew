@@ -1,7 +1,7 @@
 {
   "name": "chromabrew",
   "version": "1.0.0",
-  "description": "Convert SRM or EBC color values to web-friendly hex.",
+  "description": "Predict the color of a batch of beer, and convert between known color values and web-friendly hex.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
