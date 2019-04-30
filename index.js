@@ -8,11 +8,11 @@ const KILOGRAM_TO_POUND = 2.204623;
 
 const DEFAULT_SRM_FORMULA = 'morey';
 
-let beerColor = function (options) {
-  return new beerColor.Batch(options);
+let chromabrew = function (options) {
+  return new chromabrew.Batch(options);
 };
 
-let Batch = beerColor.Batch = function (options) {
+let Batch = chromabrew.Batch = function (options) {
   if (options.srm) {
     this._setSRM(options.srm, options);
   } else if (options.ebc) {
@@ -77,4 +77,4 @@ Batch.mcu = {
   mosher:   (srm) => Math.max(0, srm - 4.7) / 0.3,
 };
 
-module.exports = beerColor;
+module.exports = chromabrew;

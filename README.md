@@ -1,4 +1,4 @@
-# Beer Color
+# Chromabrew
 
 Convert SRM, EBC, or a list of Lovibond values to another color scale, or to a hex color.
 
@@ -9,32 +9,32 @@ Color values are provided by Barley Dog Brewery [here](https://www.barleydogbrew
 Install the library:
 
 ```
-npm install --save beer-color
+npm install --save chromabrew
 ```
 
 Require the module:
 
 ```javascript
-let beerColor = require('beer-color');
+let chromabrew = require('chromabrew');
 ```
 
 Pass options which describe a batch to the `Batch` constructor, or directly to the required module.  See the list of accepted options below.  Call `hex` on the returned object to get a color:
 
 ```javascript
-new beerColor.Batch({ srm: 4 }).hex();
+new chromabrew.Batch({ srm: 4 }).hex();
 // => '#ECE61A'
 
-beerColor({ srm: 4 }).hex();
+chromabrew({ srm: 4 }).hex();
 // => '#ECE61A'
 
-beerColor({ ebc: 4 }).hex();
+chromabrew({ ebc: 4 }).hex();
 // => '#F8F753'
 ```
 
 Convert between color scales:
 
 ```javascript
-let batch = beerColor({ srm: 4 });
+let batch = chromabrew({ srm: 4 });
 
 batch.srm();
 // => 4
@@ -52,7 +52,7 @@ batch.lovibond();
 Specify which calculation method was used to determine the provided `srm` or `ebc`, or which method to use when converting between scales:
 
 ```javascript
-let batch = beerColor({ srm: 14, calculator: 'daniels' });
+let batch = chromabrew({ srm: 14, calculator: 'daniels' });
 
 batch.srm('daniels');
 // => 14
@@ -115,20 +115,20 @@ The following options define each ingredient in the `ingredients` batch option:
 The domain of valid inputs is 0 through 40 SRM.  Input values are rounded to the nearest 0.1 SRM within this domain:
 
 ```javascript
-beerColor({ srm: -1 }).hex() === beerColor({ srm: 0 }).hex();
+chromabrew({ srm: -1 }).hex() === chromabrew({ srm: 0 }).hex();
 // => true
 
-beerColor({ srm: Number.MAX_VALUE }).hex() === beerColor({ srm: 40 }).hex();
+chromabrew({ srm: Number.MAX_VALUE }).hex() === chromabrew({ srm: 40 }).hex();
 // => true
 
-beerColor({ srm: Math.PI }).hex() === beerColor({ srm: 3.1 }).hex();
+chromabrew({ srm: Math.PI }).hex() === chromabrew({ srm: 3.1 }).hex();
 // => true  
 ```
 
 The `'daniels'` and `'mosher'` SRM calculation scales have a minimum result of `8.4` and `4.7`, respectively.  Where a provided `srm` would result in a negative `mcu`, the `mcu` is set to 0:
 
 ```javascript
-let daniels = beerColor({ srm: 4, calculator: 'daniels' });
+let daniels = chromabrew({ srm: 4, calculator: 'daniels' });
 
 daniels.mcu();
 // => 0
@@ -139,7 +139,7 @@ daniels.srm();
 daniels.srm('daniels');
 // => 8.4
 
-let mosher = beerColor({ srm: 4, calculator: 'mosher' });
+let mosher = chromabrew({ srm: 4, calculator: 'mosher' });
 
 mosher.mcu();
 // => 0
