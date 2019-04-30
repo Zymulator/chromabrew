@@ -4,7 +4,7 @@
   "description": "Convert SRM or EBC color values to web-friendly hex.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -23,12 +23,17 @@
     "hex",
     "morey",
     "daniels",
-    "mosher"
+    "mosher",
+    "barry",
+    "wow"
   ],
   "author": "Nick Barry",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/zymulator/chromabrew/issues"
   },
-  "homepage": "https://github.com/zymulator/chromabrew#readme"
+  "homepage": "https://github.com/zymulator/chromabrew#readme",
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  }
 }

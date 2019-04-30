@@ -67,6 +67,13 @@ batch.srm('mosher');
 // defaults to 'morey'
 batch.ebc();
 // => 28.9000740481361
+
+batch.hex('daniels');
+// => '#B26033'
+
+// defaults to 'morey'
+batch.hex();
+// => '#A85C37'
 ```
 
 ### Options
@@ -82,7 +89,7 @@ Any one of the following options must be passed to the module:
 | `l` or `lovibond` | the degrees Lovibond of a batch | `Number` |
 | `batch` | options describing a batch in detail **(see below)** | `Object` |
 
-This option may be used in combination with the TODO option to specify which calculation method was used:
+This option may be used in combination with a known color value (`srm`, `ebc`, or `l`) to specify which calculation method was used:
 
 | option | description | type |
 |-|-|-|

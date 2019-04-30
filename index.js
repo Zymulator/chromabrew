@@ -60,16 +60,9 @@ Batch.prototype.l = Batch.prototype.lovibond = function (calculator) {
   return (this.srm(calculator) + 0.6) / 1.35;
 };
 
-Batch.prototype.hex = function () {
-  let deciSRM = Math.max(0, Math.round(this.srm() * 10));
+Batch.prototype.hex = function (calculator) {
+  let deciSRM = Math.max(0, Math.round(this.srm(calculator) * 10));
   return DECI_SRM[Math.min(DECI_SRM.length - 1, deciSRM)];
-};
-
-Batch.srm = {
-  morey:   (mcu) => 1.4922 * Math.pow(mcu, 0.6859),
-  daniels: (mcu) => 0.2 * mcu + 8.4,
-  mosher:  (mcu) => 0.3 * mcu + 4.7,
-  barry:   (mcu) => 1.5 * Math.pow(mcu, 0.7),
 };
 
 Batch.mcu = {
@@ -77,6 +70,13 @@ Batch.mcu = {
   daniels: (srm) => Math.max(0, srm - 8.4) / 0.2,
   mosher:  (srm) => Math.max(0, srm - 4.7) / 0.3,
   barry:   (srm) => Math.pow(srm / 1.5, 1 / 0.7),
+};
+
+Batch.srm = {
+  morey:   (mcu) => 1.4922 * Math.pow(mcu, 0.6859),
+  daniels: (mcu) => 0.2 * mcu + 8.4,
+  mosher:  (mcu) => 0.3 * mcu + 4.7,
+  barry:   (mcu) => 1.5 * Math.pow(mcu, 0.7),
 };
 
 module.exports = chromabrew;
