@@ -86,7 +86,9 @@ This option may be used in combination with the TODO option to specify which cal
 
 | option | description | type |
 |-|-|-|
-| `calculator` | the SRM calculation method used: `'morey'` **(default)**, `'daniels'`, or `'mosher'` | `String` |
+| `calculator` | the SRM calculation method used: `'morey'` **(default)**, `'daniels'`, `'mosher'`, or `'barry'` † | `String` |
+
+† apparently they let anyone create a beer color scale
 
 #### Batch Options
 
