@@ -1,6 +1,6 @@
 // decisrm.json sourced from https://www.barleydogbrewery.com/xml/colors.xml
 // each index represents an increment of 0.1 SRM; 0.0 to 40.0, inclusive
-const DECI_SRM = require('./decisrm');
+const DECI_SRM = require('./decisrm.json');
 
 const SRM_TO_EBC = 1.97;
 const LITRE_TO_GALLON = 0.2199692;

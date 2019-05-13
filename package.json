@@ -1,6 +1,6 @@
 {
   "name": "chromabrew",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Predict the color of a batch of beer, and convert between known color values and web-friendly hex.",
   "main": "index.js",
   "scripts": {
