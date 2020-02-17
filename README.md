@@ -2,7 +2,7 @@
 
 Convert SRM, EBC, or a list of Lovibond values to another color scale, or to a hex color.
 
-Color values are provided by Barley Dog Brewery [here](https://www.barleydogbrewery.com/xml/colors.xml)
+Color values are provided by Barley Dog Brewery [here](https://www.barleydogbrewery.com/xml/colors.xml).
 
 ## Usage
 
